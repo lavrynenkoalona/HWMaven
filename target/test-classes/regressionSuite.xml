@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="Full regression suite">
+<!--<test name="regression">
+    <classes>
+        <class name="CalculatorTest"/>
+        <class name="StringWorkerTest"/>
+    </classes>
+</test>-->
+
+    <test name="Parallel_3_threads_tests" >
+        <classes>
+            <class name="CalculatorTest"/>
+            <class name="StringWorkerTest"/>
+        </classes>
+    </test>
+    <!--<test name="Sequential_tests">
+        <classes>
+            <class name="StringWorkerTest"/>
+        </classes>
+    </test>-->
+
+</suite>
