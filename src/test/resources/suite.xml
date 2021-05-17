@@ -1,7 +1,7 @@
-<!--<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://maven.apache.org/POM/4.0.0">
 <suite name="Suite name">
-    <test name="test name">
+    <!--<test name="test name">
       <parameter name="param1" value="Test to param"/>
         <classes>
             <class name="CalculatorTest">
@@ -10,5 +10,5 @@
                 </methods>
             </class>
         </classes>
-    </test>
-</suite>-->
+    </test>-->
+</suite>
