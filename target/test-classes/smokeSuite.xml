@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE suite SYSTEM "http://maven.apache.org/POM/4.0.0">
-<suite name="Full regression suite">
-    <test name="regression">
-        <classes>
-            <class name="CalculatorTest"/>
-        </classes>
-    </test>
-</suite>

@@ -2,21 +2,21 @@
 <suite name="Full regression suite">
 <!--<test name="regression">
     <classes>
-        <class name="CalculatorTest"/>
-        <class name="StringWorkerTest"/>
+        <class name="UnitTests.CalculatorTest"/>
+        <class name="UnitTests.StringWorkerTest"/>
     </classes>
 </test>-->
 
     <test name="Parallel_3_threads_tests" >
         <classes>
-            <class name="CalculatorTest"/>
-            <class name="StringWorkerTest"/>
-            <class name="AdditionalOperationsTest"/>
+            <class name="UnitTests.CalculatorTest"/>
+            <class name="UnitTests.StringWorkerTest"/>
+            <class name="UnitTests.AdditionalOperationsTest"/>
         </classes>
     </test>
     <!--<test name="Sequential_tests">
         <classes>
-            <class name="StringWorkerTest"/>
+            <class name="UnitTests.StringWorkerTest"/>
         </classes>
     </test>-->
 

@@ -4,7 +4,7 @@
     <!--<test name="test name">
       <parameter name="param1" value="Test to param"/>
         <classes>
-            <class name="CalculatorTest">
+            <class name="UnitTests.CalculatorTest">
                 <methods>
                     <include name="ParameterTestOne"/>
                 </methods>

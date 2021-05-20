@@ -1,3 +1,6 @@
+package UnitTests;
+
+import UnitTests.BaseTest;
 import org.testng.annotations.*;
 
 import static org.testng.Assert.*;

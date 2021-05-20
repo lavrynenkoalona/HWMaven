@@ -3,7 +3,7 @@
 <suite name="Full regression suite">
     <test name="regression">
         <classes>
-            <class name="CalculatorTest"/>
+            <class name="UnitTests.CalculatorTest"/>
         </classes>
     </test>
 </suite>

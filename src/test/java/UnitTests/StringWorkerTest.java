@@ -1,3 +1,7 @@
+package UnitTests;
+
+import UnitTests.BaseTest;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -9,14 +13,14 @@ public class StringWorkerTest extends BaseTest {
     @Test
     public void setStringWorker1Test() {
         String expectedValue = "QWErty123";
-        assertEquals(stringWorker.concatenate("QWE", "rt", "y123"), expectedValue, "concatenate works wrong, expected value - " + expectedValue);
+        Assert.assertEquals(stringWorker.concatenate("QWE", "rt", "y123"), expectedValue, "concatenate works wrong, expected value - " + expectedValue);
 
     }
 
     @Test
     public void setStringWorker2Test() {
         String expectedValue = "1234567890qwe";
-        assertEquals(stringWorker.concatenate("123", "456789", "0qwe"), expectedValue, "concatenate works wrong, expected value - " + expectedValue);
+        Assert.assertEquals(stringWorker.concatenate("123", "456789", "0qwe"), expectedValue, "concatenate works wrong, expected value - " + expectedValue);
 
     }
 
