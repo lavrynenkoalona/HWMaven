@@ -49,7 +49,7 @@ public class MonitorsCompareTest {
 //    }
 
     @Test(priority = 1)
-    public void findFistMonitor() throws InterruptedException {
+    public void findFistMonitor() {
         driver.navigate().to("https://rozetka.com.ua/computers-notebooks/c80089/");
         List<WebElement> products = driver.findElements(By.xpath("//span[@class='goods-tile__price-value']"));
         int counter = 1;
