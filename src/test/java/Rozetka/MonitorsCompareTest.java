@@ -1,16 +1,17 @@
 package Rozetka;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pages.Rozetka.BasePage;
-import pages.Rozetka.RozetkaAllMonitorsPage;
-import pages.Rozetka.RozetkaComparePage;
-import pages.Rozetka.RozetkaMonitotProductPage;
+import pages.Rozetka.BaseePage;
+import pages.Rozetka.RozetkaAllMonitorsFactoryPage;
+import pages.Rozetka.RozetkaCompareFactoryPage;
+import pages.Rozetka.RozetkaMonitotProductFactoryPage;
 
 import java.awt.*;
 
@@ -27,10 +28,10 @@ public class MonitorsCompareTest {
     String second;
     String firstName;
     String secondName;
-    RozetkaAllMonitorsPage allMonitors;
-    RozetkaMonitotProductPage monitorProduct;
-    RozetkaComparePage comparePage;
-    BasePage base;
+    RozetkaAllMonitorsFactoryPage allMonitors;
+    RozetkaMonitotProductFactoryPage monitorProduct;
+    RozetkaCompareFactoryPage comparePage;
+    BaseePage base;
 
     @BeforeClass
     public void setupBrowser() {
@@ -38,7 +39,7 @@ public class MonitorsCompareTest {
         driver = new ChromeDriver();
         driver.get(initialUrl);
         wait = new WebDriverWait(driver, 10);
-        base = new BasePage(driver);
+        base = new BaseePage(driver);
     }
 
     @AfterClass
@@ -53,14 +54,14 @@ public class MonitorsCompareTest {
 
     @Test(priority = 1)
     public void findFistMonitor() {
-        allMonitors = new RozetkaAllMonitorsPage(driver);
+        allMonitors = new RozetkaAllMonitorsFactoryPage(driver);
         allMonitors.navigateToAllMonitorPage();
         allMonitors.findMonitorPriceLessThanMinPrice();
     }
 
     @Test(priority = 2)
     public void addMonitorToCompare() throws InterruptedException, AWTException {
-        monitorProduct = new RozetkaMonitotProductPage(driver);
+        monitorProduct = new RozetkaMonitotProductFactoryPage(driver);
         monitorProduct.waitCompareButton();
         monitorProduct.clickProductCompareButton();
         monitorProduct.waitCompareIcon();
@@ -81,7 +82,7 @@ public class MonitorsCompareTest {
 
     @Test(priority = 5)
     public void addSecondMonitorToCompare() throws InterruptedException, AWTException {
-        monitorProduct = new RozetkaMonitotProductPage(driver);
+        monitorProduct = new RozetkaMonitotProductFactoryPage(driver);
         monitorProduct.waitCompareButton();
         monitorProduct.clickProductCompareButton();
         monitorProduct.waitCompareIcon();
@@ -96,7 +97,7 @@ public class MonitorsCompareTest {
 
     @Test(priority = 7)
     public void checkComparePage() throws AWTException {
-        comparePage=new RozetkaComparePage(driver);
+        comparePage=new RozetkaCompareFactoryPage(driver);
         monitorProduct. waitCompareIcon();
         monitorProduct.clickCompareIcon();
         comparePage.waitMonitorCompareLink();
