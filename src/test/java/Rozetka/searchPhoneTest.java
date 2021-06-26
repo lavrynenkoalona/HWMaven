@@ -23,7 +23,7 @@ public class searchPhoneTest {
     WebDriverWait wait;
     String initialUrl = "https://rozetka.com.ua/";
 
-    @BeforeClass
+    //@BeforeClass
     public void setupBrowser() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -35,12 +35,12 @@ public class searchPhoneTest {
 //        driver.quit();
 //    }
 
-    @BeforeMethod
+    //@BeforeMethod
     public void navigateAction() {
         driver.get(initialUrl);
     }
 
-    @Test
+    //@Test
     public void searchPhoneByManufacturer() {
         driver.findElement(By.xpath("//input[@name='search']")).sendKeys("samsung" + Keys.ENTER);
         WebElement stats = wait.until(presenceOfElementLocated(By.xpath("//input[@name='search']")));
@@ -63,7 +63,7 @@ public class searchPhoneTest {
         }
     }
 
-    @Test
+    //@Test
     public void searchPhoneByPrice() {
         driver.findElement(By.xpath("//input[@name='search']")).sendKeys("samsung" + Keys.ENTER);
         WebElement stats = wait.until(presenceOfElementLocated(By.xpath("//input[@name='search']")));

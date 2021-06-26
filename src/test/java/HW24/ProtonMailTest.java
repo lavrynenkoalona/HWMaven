@@ -26,7 +26,7 @@ public class ProtonMailTest {
     String inboxMailBefore;
     String inboxMailAfter;
 
-    @BeforeClass
+    //@BeforeClass
     public void setupBrowser() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -34,7 +34,7 @@ public class ProtonMailTest {
         wait = new WebDriverWait(driver, 10);
     }
 
-    @Test
+    //@Test
     public void authToSite() {
         driver.findElement(By.xpath("(//li [@class='action'])[1]")).click();
         driver.findElement(By.name("username")).sendKeys("a.light.na");
@@ -42,7 +42,7 @@ public class ProtonMailTest {
         driver.findElement(By.id("login_btn")).click();
     }
 
-        @Test
+        //@Test
         public void newEmailForm() throws InterruptedException {
             wait.until(presenceOfElementLocated(By.xpath("//button [@class='compose pm_button sidebar-btn-compose']")));
             inboxMailBefore = driver.findElement(By.xpath("//em [@class='navigationItem-counter']")).getText().replace("(","").replace(")","");

@@ -19,13 +19,13 @@ public class TabsTest {
     WebDriverWait wait;
 //    String initialUrl = "https://rozetka.com.ua/";
 
-    @BeforeClass
+    //@BeforeClass
     public void setupBrowser() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 10);
     }
-        @Test
+        //@Test
     public void testTabs() {
         driver.get("https://business.twitter.com/start-advertising");
 

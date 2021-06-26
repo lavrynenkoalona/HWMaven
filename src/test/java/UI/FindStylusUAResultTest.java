@@ -22,23 +22,23 @@ public class FindStylusUAResultTest {
     WebDriver driver;
     WebDriverWait wait;
 
-    @BeforeClass
+    //@BeforeClass
     public void setupBrowser(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 10);
     }
 
-    @AfterClass
+   // @AfterClass
     public void closeBworser(){
         driver.quit();
     }
 
-    @BeforeMethod
+    //@BeforeMethod
     public void navigateAction(){
         driver.get("https://google.com/ncr");
     }
-    @Test
+    //@Test
     public void testSearchByEnterClick() {
         driver.findElement(By.name("q")).sendKeys("iphone kyiv buy" + Keys.ENTER);
         WebElement stats = wait.until(presenceOfElementLocated(By.cssSelector("#result-stats")));

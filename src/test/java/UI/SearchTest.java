@@ -20,24 +20,24 @@ public class SearchTest {
     WebDriver driver;
     WebDriverWait wait;
 
-    @BeforeClass
+    //@BeforeClass
     public void setupBrowser(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 10);
     }
 
-    @AfterClass
+    //@AfterClass
     public void closeBworser(){
         driver.quit();
     }
 
-    @BeforeMethod
+    //@BeforeMethod
     public void navigateAction(){
         driver.get("https://google.com/ncr");
     }
 
-    @Test
+    //@Test
     public void testSearchByEnterClick() {
         driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER);
         WebElement stats = wait.until(presenceOfElementLocated(By.cssSelector("#result-stats")));
@@ -45,7 +45,7 @@ public class SearchTest {
         assertTrue(stats.getText().contains("results"));
     }
 
-    @Test
+    //@Test
     public void testSearchBySearchButtonClick() {
         driver.findElement(By.name("q")).sendKeys("cheese");
         driver.findElements(By.xpath("//input[@name='btnK']")).get(1).click();

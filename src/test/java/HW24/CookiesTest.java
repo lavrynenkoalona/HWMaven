@@ -29,7 +29,7 @@ public class CookiesTest {
     String initialUrl = "http://demo.guru99.com/Agile_Project/Agi_V1/index.php";
     Set<Cookie> cookies;
 
-    @BeforeClass
+    //@BeforeClass
     public void setupBrowser() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -37,7 +37,7 @@ public class CookiesTest {
         driver.navigate().to(initialUrl);
     }
 
-    @Test
+    //@Test
     public void login() {
         wait.until(presenceOfElementLocated(By.name("btnLogin")));
         driver.findElement(By.name("uid")).click();
@@ -49,7 +49,7 @@ public class CookiesTest {
         assertEquals(button,"Log out");
     }
 
-    @Test
+    //@Test
     public void printCookies() {
 
         cookies = driver.manage().getCookies();
@@ -58,7 +58,7 @@ public class CookiesTest {
     }
 
 
-    @Test
+    //@Test
     public void deletingCookie() {
         driver.manage().deleteAllCookies();
         Set<Cookie> cookiesAfterDelete = driver.manage().getCookies();
@@ -66,7 +66,7 @@ public class CookiesTest {
 
     }
 
-    @Test
+    //@Test
     public void xcheckAfterRefresh() {
         driver.navigate().refresh();
         String button2 = driver.findElement(By.xpath("//table//preceding::a[1]")).getText();

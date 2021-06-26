@@ -6,20 +6,20 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
 public class BaseTest {
-    @BeforeClass
+    //@BeforeClass
     public void beforeClassActions() {
         System.out.println("Before Classes");
     }
-    @AfterClass
+    //@AfterClass
     public void afterClassActions() {
         System.out.println("After Classes");
     }
 
-    @BeforeSuite
+    //@BeforeSuite
     public void beforeSuiteActions() {
         System.out.println("Before Suite");
     }
-    @AfterSuite(alwaysRun = true)
+    //@AfterSuite(alwaysRun = true)
     public void afterSuiteActions() {
         System.out.println("After Suite");
     }

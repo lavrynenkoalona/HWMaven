@@ -10,31 +10,31 @@ public class AdditionalOperationsTest extends BaseTest {
     AdditionalOperations additionalOperations = new AdditionalOperations();
 
 
-    @Test()
+    //@Test()
     public void assertEqualsNoOrder(List<Integer> list1, List<Integer> list2) {
 
         assertEqualsNoOrder(additionalOperations.list1, additionalOperations.list2);
     }
 
-   @Test()
+   //@Test()
     public void assertTrue( boolean b) {
 
       assertTrue(additionalOperations.arr1[1]==additionalOperations.arr2[1]);
    }
 
-    @Test()
+    //@Test()
     public void assertFalse( boolean b) {
 
         assertFalse(additionalOperations.arr1[3]==additionalOperations.arr2[3]);
     }
 
-    @Test()
+    //@Test()
     public void assertArrayEquals( int arr1[], int arr2[]) {
 
         assertArrayEquals(additionalOperations.arr1,additionalOperations.arr2 );
     }
 
-    @Test()
+    //@Test()
     public void assertNull( String p){
 
         assertNull(additionalOperations.str1 );

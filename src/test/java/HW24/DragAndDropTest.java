@@ -19,7 +19,7 @@ public class DragAndDropTest {
     String initialUrl = "http://demo.guru99.com/test/drag_drop.html";
     Set<Cookie> cookies;
 
-    @BeforeClass
+    //@BeforeClass
     public void setupBrowser() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -27,7 +27,7 @@ public class DragAndDropTest {
         driver.navigate().to(initialUrl);
     }
 
-    @Test
+    //@Test
     public void dragAndDrop() {
         WebElement From1=driver.findElement(By.xpath("//*[@id='credit2']/a"));
         WebElement To1=driver.findElement(By.xpath("//*[@id='bank']/li"));

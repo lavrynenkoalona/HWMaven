@@ -22,19 +22,19 @@ public class LoginTest {
     WebDriverWait wait;
     String url = "http://demo.guru99.com/Agile_Project/Agi_V1/index.php";
 
-    @BeforeClass
+    //@BeforeClass
     public void setupBrowser() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 10);
     }
 
-    @AfterClass
+    //@AfterClass
     public void closeBworser() {
         driver.quit();
     }
 
-    @Test
+    //@Test
     public void positiveLogin() {
         driver.get(url);
         driver.findElement(By.name("uid")).sendKeys("1303");
@@ -49,7 +49,7 @@ public class LoginTest {
         assertEquals(url, resultUrl);
     }
 
-    @Test
+    //@Test
     public void InvalidLogin1() {
         driver.get(url);
         driver.findElement(By.name("uid")).sendKeys("123");
@@ -65,7 +65,7 @@ public class LoginTest {
         assertEquals(url, resultUrl);
     }
 
-    @Test
+    //@Test
     public void InvalidLogin2() {
         driver.get(url);
         driver.findElement(By.name("uid")).sendKeys("1303");
@@ -81,7 +81,7 @@ public class LoginTest {
         assertEquals(url, resultUrl);
     }
 
-    @Test
+   // @Test
     public void InvalidLogin3() {
         driver.get(url);
         driver.findElement(By.name("uid")).sendKeys("");
@@ -97,7 +97,7 @@ public class LoginTest {
         assertEquals(url, resultUrl);
     }
 
-    @Test
+    //@Test
     public void InvalidLogin4() {
         driver.get(url);
         driver.findElement(By.name("uid")).sendKeys("123");
@@ -113,7 +113,7 @@ public class LoginTest {
         assertEquals(url, resultUrl);
     }
 
-    @Test
+    //@Test
     public void InvalidLogin5() {
         driver.get(url);
         driver.findElement(By.name("uid")).sendKeys("Guru99");
@@ -129,7 +129,7 @@ public class LoginTest {
         assertEquals(url, resultUrl);
     }
 
-    @Test
+    //@Test
     public void InvalidLogin6() {
         driver.get(url);
         driver.findElement(By.name("uid")).sendKeys("1303");

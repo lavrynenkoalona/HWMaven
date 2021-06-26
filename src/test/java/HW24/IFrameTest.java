@@ -22,7 +22,7 @@ public class IFrameTest {
     WebDriverWait wait;
     String initialUrl = "http://demo.guru99.com/test/guru99home/";
 
-    @BeforeClass
+    //@BeforeClass
     public void setupBrowser() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -30,7 +30,7 @@ public class IFrameTest {
 
     }
 
-    @Test
+    //@Test
     public void firstIFrame() throws InterruptedException {
 
         driver.navigate().to(initialUrl);

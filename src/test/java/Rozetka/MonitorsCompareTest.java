@@ -33,7 +33,7 @@ public class MonitorsCompareTest {
     RozetkaCompareFactoryPage comparePage;
     BaseePage base;
 
-    @BeforeClass
+    //@BeforeClass
     public void setupBrowser() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -42,7 +42,7 @@ public class MonitorsCompareTest {
         base = new BaseePage(driver);
     }
 
-    @AfterClass
+    //@AfterClass
     public void closeBworser() {
         driver.quit();
     }
@@ -52,14 +52,14 @@ public class MonitorsCompareTest {
 //        driver.get(initialUrl);
 //    }
 
-    @Test(priority = 1)
+    //@Test(priority = 1)
     public void findFistMonitor() {
         allMonitors = new RozetkaAllMonitorsFactoryPage(driver);
         allMonitors.navigateToAllMonitorPage();
         allMonitors.findMonitorPriceLessThanMinPrice();
     }
 
-    @Test(priority = 2)
+    //@Test(priority = 2)
     public void addMonitorToCompare() throws InterruptedException, AWTException {
         monitorProduct = new RozetkaMonitotProductFactoryPage(driver);
         monitorProduct.waitCompareButton();
@@ -68,19 +68,19 @@ public class MonitorsCompareTest {
         assertEquals(driver.findElement(By.xpath("//rz-icon-counter//child::span")).getText(), "1");
     }
 
-    @Test(priority = 3)
+    //@Test(priority = 3)
     public void getFistMonitorName() {
         monitorProduct.waitProductTitle();
         first = monitorProduct.getFirstMonitorName();
         base.backPreviousPage();
     }
 
-    @Test(priority = 4)
+    //@Test(priority = 4)
     public void findSecondMonitor() throws InterruptedException {
         allMonitors.findMonitorPriceLessThanCurrentPrice();
     }
 
-    @Test(priority = 5)
+    //@Test(priority = 5)
     public void addSecondMonitorToCompare() throws InterruptedException, AWTException {
         monitorProduct = new RozetkaMonitotProductFactoryPage(driver);
         monitorProduct.waitCompareButton();
@@ -89,13 +89,13 @@ public class MonitorsCompareTest {
         assertEquals(driver.findElement(By.xpath("//rz-icon-counter//child::span")).getText(), "2");
     }
 
-    @Test(priority = 6)
+    //@Test(priority = 6)
     public void getSecondMonitorName() {
         monitorProduct.waitProductTitle();
        second= monitorProduct.getSecondMonitorName();
     }
 
-    @Test(priority = 7)
+    //@Test(priority = 7)
     public void checkComparePage() throws AWTException {
         comparePage=new RozetkaCompareFactoryPage(driver);
         monitorProduct. waitCompareIcon();
