@@ -4,14 +4,17 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.Citrus.CitrusFilterPage;
 import pages.Citrus.CitrusHomePage;
 import pages.Citrus.CitrusProductListPage;
 import steps.Citrus.*;
+import utils.LogListener;
+import utils.TestListener;
 
 import static com.codeborne.selenide.Selenide.*;
-
+@Listeners(TestListener.class)
 public class CitrusFilterTest {
 //    CitrusHomePage citrusHomePage;
 //    CitrusProductListPage citrusProductListPage;

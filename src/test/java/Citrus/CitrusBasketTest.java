@@ -2,6 +2,7 @@ package Citrus;
 
 import com.codeborne.selenide.Condition;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.Citrus.CitrusBasketPage;
 import pages.Citrus.CitrusHomePage;
@@ -11,9 +12,11 @@ import steps.Citrus.CitrusBasketPageSteps;
 import steps.Citrus.CitrusHomePageSteps;
 import steps.Citrus.CitrusProductListPageSteps;
 import steps.Citrus.CitrusProductPageSteps;
+import utils.LogListener;
+import utils.TestListener;
 
 import static com.codeborne.selenide.Selenide.open;
-
+@Listeners(TestListener.class)
 public class CitrusBasketTest {
 //    CitrusHomePage citrusHomePage;
 //    CitrusProductListPage citrusProductListPage;
