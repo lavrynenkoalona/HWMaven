@@ -157,25 +157,25 @@ public class RestAssuredTest {
     }
 
 
-    @Test(dependsOnMethods = {"postNewEmployeePositive"})
-    public void putEmployeePositive() {
-        PutEmployeeRequestModel putRequestEmployeeObject = new PutEmployeeRequestModel("Jessika", "50000", "25");
-        PutEmployeeResponseModel putResponseModelObject = new PutEmployeeResponseModel("success",
-                new Data("Jessika", "50000", "25"), "Successfully! Record has been updated.");
-
-        PutEmployeeResponseModel responseNewEmployeeObject = given()
-                .with()
-                .contentType("application/json")
-                .body(putRequestEmployeeObject)
-                .log().all()
-                .when()
-                .request("PUT", "/api/v1/update/21")
-                .then()
-                .log().body()
-                .statusCode(200)
-                .extract()
-                .as(PutEmployeeResponseModel.class);
-        assertEquals(responseNewEmployeeObject, putResponseModelObject);
-    }
+//    @Test(dependsOnMethods = {"postNewEmployeePositive"})
+//    public void putEmployeePositive() {
+//        PutEmployeeRequestModel putRequestEmployeeObject = new PutEmployeeRequestModel("Jessika", "50000", "25");
+//        PutEmployeeResponseModel putResponseModelObject = new PutEmployeeResponseModel("success",
+//                new Data("Jessika", "50000", "25"), "Successfully! Record has been updated.");
+//
+//        PutEmployeeResponseModel responseNewEmployeeObject = given()
+//                .with()
+//                .contentType("application/json")
+//                .body(putRequestEmployeeObject)
+//                .log().all()
+//                .when()
+//                .request("PUT", "/api/v1/update/21")
+//                .then()
+//                .log().body()
+//                .statusCode(200)
+//                .extract()
+//                .as(PutEmployeeResponseModel.class);
+//        assertEquals(responseNewEmployeeObject, putResponseModelObject);
+//    }
 
 }
